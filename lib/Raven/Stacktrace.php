@@ -63,7 +63,8 @@ class Raven_Stacktrace
 
             if (empty($result) && isset($errcontext)) {
                 // If we've been given an error context that can be used as the vars for the first frame.
-                $vars = $errcontext;
+                // $vars = $errcontext;
+                $vars = []; // how sad, not work with my environment. need to face to empty array
             } else {
                 if ($trace) {
                     if ($shiftvars) {
